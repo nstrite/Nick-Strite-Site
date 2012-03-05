@@ -1,18 +1,26 @@
 # static files with sinatra on heroku!
 
 ### you may first need to install heroku command line tools
-```gem install heroku```
+```
+gem install heroku
+```
 
 ### login to heroku services
-```heroku login```
+```
+heroku login
+```
 
 ### if you haven't already, you'll need to set up ssh keys with heroku
-```heroku keys:add```
+```
+heroku keys:add
+```
 
 ## now, the repo!
 
 ### clone this repository to get you started (if you want)
-```git clone git@github.com:sethvincent/sinatra-skeleton-heroku-static-pages-example.git```
+```
+git clone git@github.com:sethvincent/sinatra-skeleton-heroku-static-pages-example.git
+```
 
 ### make and commit your changes
 ```
@@ -21,10 +29,14 @@ git commit -m 'stuff'
 ```
 
 ### when you're ready, create a site on heroku
-```heroku create```
+```
+heroku create
+```
 
 ### this creates a remote repo that you can push to
-```git push heroku master```
+```
+git push heroku master
+```
 
 ## done!
 
