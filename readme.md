@@ -32,6 +32,10 @@ git commit -m 'stuff'
 ```
 heroku create
 ```
+if you want to run your app on heroku's cedar stack do this:
+```
+heroku create --stack cedar
+```
 
 ### this creates a remote repo that you can push to
 ```
