@@ -15,7 +15,7 @@
 ```git clone git@github.com:sethvincent/sinatra-skeleton-heroku-static-pages-example.git```
 
 ### make and commit your changes
-```git add .
+```git add .  
   git commit -m 'stuff'
 ```
 
