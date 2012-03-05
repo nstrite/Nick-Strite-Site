@@ -1,6 +1,6 @@
 # static files with sinatra on heroku!
 
-### you may first need to install heroku
+### you may first need to install heroku command line tools
   gem install heroku
 
 ### login to heroku services
