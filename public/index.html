@@ -50,7 +50,7 @@
 		<center><div id="slideshow"></div></center>
 		<div class="one-third column">
 			<h3>About Nick Strite</h3>
-			<p>A northwest based freelance photographer and journalist, Nick was born in Kansas City, Kansas and has lived through out the United States. He graduated from The Evergreen State College in 2012 and continues to live in Olympia, Wash. Nick has done freelance work for several magazines including AMP and AP. He was an intern in 2009 learning from award winning photojournalist Tony Overman at The Olympian. Nick Strite intends to continue with his photojournalism career after college and plans to attend graduate school.</p>
+			<p>A northwest based freelance photojournalist, Nick was born in Kansas City, Kansas and has lived through out the United States. He graduated from The Evergreen State College in 2012 and continues to live in Olympia, Wash. Nick has done freelance work for several magazines including AMP and AP. He was an intern in 2009 learning from award winning photojournalist Tony Overman at The Olympian. Nick Strite intends to continue with his photojournalism career after college and plans to attend graduate school.</p>
 		</div>
 		<div class="one-third column">
 			<h3>Nick's Core Principles</h3>
@@ -80,15 +80,17 @@
 	<script src="javascripts/tabs.js"></script>
 	<script src="flickrshow-7.2.js"></script>
 	<script>
-    var robin = $('#slideshow').flickrshow({
+    var robin = new flickrshow('robin', {
         autoplay:true,
         interval:5000,
+        license:null,
         page:1,
-        per_page:10,
-        tags: 'street',
+        per_page:50,
+        tags:'street',
         user:'30834858@N05'
     });
-	</script>
+</script>
+	
 <!-- End Document
 ================================================== -->
 </body>
