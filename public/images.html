@@ -72,13 +72,13 @@ function buildLinks (json) {
     while ( photo = json.items.shift() ){
         $anchor = $('<a/>').attr({
             // get the medium-large size photo
-            href: photo.media.m.replace('_m', '_z'),
+            href: photo.media.m.replace('_c', '_c'),
             title: photo.title
         });
 
         $thumb = $('<img/>').attr({
             // get the small-square size thumbnail photo
-            src: photo.media.m.replace('_m', '_s'),
+            src: photo.media.m.replace('_n', '_q'),
             alt: photo.title
         }).appendTo($anchor);
 
