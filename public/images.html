@@ -48,6 +48,7 @@
 			<h4>Photographer</h4>
 			<h5>|<a href="index.html">Home</a>|<a href="resume.html">Resume</a>|<a href="map.html">Map</a>|<a href="blog.html">Blog</a>|</h5>   
 			<hr />
+			<div class="flickrgallery"></div>
 		</div>
     <link rel="stylesheet" href="colorbox.css" />
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
@@ -72,13 +73,13 @@ function buildLinks (json) {
     while ( photo = json.items.shift() ){
         $anchor = $('<a/>').attr({
             // get the medium-large size photo
-            href: photo.media.m.replace('_c', '_c'),
+            href: photo.media.m.replace('_m', '_z'),
             title: photo.title
         });
 
         $thumb = $('<img/>').attr({
             // get the small-square size thumbnail photo
-            src: photo.media.m.replace('_n', '_q'),
+            src: photo.media.m.replace('_c', '_c'),
             alt: photo.title
         }).appendTo($anchor);
 
@@ -89,7 +90,7 @@ function buildLinks (json) {
 
     // Wait until the DOM has loaded before trying to append to the body
     $(document).ready(function () {
-        $('body').append($links);
+        $('div.flickrgallery').append($links);
     });
 }
         </script>
