@@ -48,7 +48,58 @@
 			<h5>|<a href="index.html">Home</a>|<a href="resume.html">Resume</a>|<a href="map.html">Map</a>|<a href="blog.html">Blog</a>|</h5>   
 			<hr />
 		</div>
-<center>
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="colorbox.css" />
+        <script src="jquery.min.js"></script>
+        <script src="jquery.colorbox-min.js"></script>
+        <script>
+          var, params = {
+    id: '30834858@N05', // my Flickr User ID
+    format: 'json',
+    jsoncallback: '?'
+},
+feedURL = 'http://api.flickr.com/services/feeds/photos_public.gne',
+feedQuery = decodeURIComponent($.param(params));
+
+$.getJSON(feedURL + '?' + feedQuery, buildLinks);  // our code
+        </script>
+        function buildLinks (json) {
+    var 
+    photo,
+    $links = $(), 
+    $thumb,
+    $anchor;
+
+    while ( photo = json.items.shift() ){
+        $anchor = $('<a/>').attr({
+            // get the medium-large size photo
+            href: photo.media.m.replace('_m', '_z'),
+            title: photo.title
+        });
+
+        $thumb = $('<img/>').attr({
+            // get the small-square size thumbnail photo
+            src: photo.media.m.replace('_m', '_s'),
+            alt: photo.title
+        }).appendTo($anchor);
+
+        $links = $links.add($anchor);
+    }
+
+    $links.colorbox({rel:'flickr', speed:0});
+
+    // Wait until the DOM has loaded before trying to append to the body
+    $(document).ready(function () {
+        $('body').append($links);
+    });
+}
+
+    </head>
+    <body>
+    </body>
+</html>
 <!-- container -->
 
 
