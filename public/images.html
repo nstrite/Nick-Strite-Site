@@ -64,8 +64,7 @@ feedURL = 'http://api.flickr.com/services/feeds/photos_public.gne',
 feedQuery = decodeURIComponent($.param(params));
 
 $.getJSON(feedURL + '?' + feedQuery, buildLinks);  // our code
-        </script>
-        function buildLinks (json) {
+function buildLinks (json) {
     var 
     photo,
     $links = $(), 
@@ -95,6 +94,7 @@ $.getJSON(feedURL + '?' + feedQuery, buildLinks);  // our code
         $('body').append($links);
     });
 }
+        </script>
 
     </head>
     <body>
